@@ -1,0 +1,20 @@
+{
+  "name": "ditt-unab-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio público DITT UNAB listo para Vercel con rutas estáticas y funciones API.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate-links.mjs",
+    "check": "node scripts/validate-links.mjs",
+    "dev": "node scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "UNLICENSED"
+}

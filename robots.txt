@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ditt-unab.vercel.app/sitemap.xml
