@@ -192,7 +192,7 @@ p
 
 .site-nav a:not(.btn).is-active
 {
-  color:var(--unab-red);
+  color:var(#6e89a8);
   background:var(--unab-red-050)
 }
 
