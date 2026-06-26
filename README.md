@@ -1,6 +1,6 @@
-# DITT UNAB — sitio listo para Vercel
+# DITT UNAB — sitio web
 
-Implementación profesionalizada del sitio público de la Dirección de Innovación y Transferencia Tecnológica UNAB.
+Implementacióndel sitio público de la Dirección de Innovación y Transferencia Tecnológica UNAB.
 
 ## Qué incluye
 
@@ -30,13 +30,6 @@ Configuración recomendada:
 - Build Command: `npm run build`
 - Output Directory: `public`
 
-
-Puedes subir el proyecto de dos formas:
-
-1. Conectar un repositorio Git en Vercel.
-2. Arrastrar la carpeta del proyecto desde el panel de Vercel.
-
-La configuración `vercel.json` mantiene URLs limpias, cabeceras básicas de seguridad y cache para assets.
 
 ## Formularios
 
@@ -83,14 +76,3 @@ Este proyecto esta sujeto a una licencia de uso restringido. No se autoriza la c
 
 Las autorizaciones deben solicitarse al correo `otl@unab.cl`. Ver `LICENSE.md`.
 
-## Notas editoriales
-
-- Actualizar dominio final en `sitemap.xml` y metadatos si no se usará `https://ditt-unab.vercel.app`.
-- Reemplazar fichas demo por tecnologías oficialmente aprobadas.
-- Validar textos legales y datos de contacto con la unidad responsable.
-
-## Licencia
-
-Este proyecto se entrega bajo una licencia de uso restringido. La copia, reproducción, distribución, modificación o reutilización total o parcial sin autorización previa y escrita de la OTL UNAB está prohibida.
-
-Las autorizaciones deben solicitarse a `otl@unab.cl`. Revisa `LICENSE.md` para el texto completo.
