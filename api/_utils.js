@@ -79,9 +79,9 @@ async function forwardToWebhook(kind, payload) {
 
 async function notifyByResend(subject, fields) {
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.SUBMISSION_TO_EMAIL;
+  const to = process.env.SUBMISSION_TO_EMAIL || 'OTL@UNAB.CL';
   const from = process.env.SUBMISSION_FROM_EMAIL || 'DITT UNAB <onboarding@resend.dev>';
-  if (!apiKey || !to) return { skipped: true };
+  if (!apiKey) return { skipped: true, reason: 'sin RESEND_API_KEY' };
   const rows = Object.entries(fields).map(([k, v]) => {
     return `<tr><td style="padding:6px 12px;border-bottom:1px solid #ddd"><strong>${escapeHtml(k)}</strong></td><td style="padding:6px 12px;border-bottom:1px solid #ddd">${escapeHtml(v)}</td></tr>`;
   }).join('');
@@ -95,10 +95,17 @@ async function notifyByResend(subject, fields) {
 }
 
 async function deliver(kind, subject, payload) {
-  console.log(`[${kind}]`, JSON.stringify(payload));
   const webhook = await forwardToWebhook(kind, payload).catch((error) => ({ forwarded: false, error: error.message }));
   const email = await notifyByResend(subject, payload).catch((error) => ({ ok: false, error: error.message }));
-  return { webhook, email };
+  const delivered = webhook.forwarded === true || email.ok === true;
+  if (delivered) {
+    console.log(`[${kind}] entregado`, JSON.stringify({ id: payload.id, webhook, email }));
+  } else {
+    // Ningún canal entregó: deja la postulación completa en los logs para no perderla
+    // y marca el error a nivel ERROR para que sea visible en la observabilidad de Vercel.
+    console.error(`[${kind}] SIN ENTREGA: configura el conector (RESEND_API_KEY o FORM_WEBHOOK_URL).`, JSON.stringify({ payload, webhook, email }));
+  }
+  return { delivered, webhook, email };
 }
 
 module.exports = { parseBody, clean, emailOk, escapeHtml, json, cors, clientIp, rateLimit, deliver };
