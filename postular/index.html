@@ -41,6 +41,7 @@
 <section class="page-hero"><div class="container"><p class="eyebrow">Declaración de Invención</p><h1>Declara tu invención</h1><p>Cuéntanos sobre tu resultado de investigación. La información será tratada como confidencial y permitirá iniciar una evaluación preliminar.</p></div></section>
 <section class="section"><div class="container form-shell"><form class="card form" data-async-form data-endpoint="/api/postular" data-success-url="/postular/gracias" novalidate>
   <div class="form__intro"><h2>Antecedentes de la tecnología</h2><p>Completa los campos obligatorios. Un ejecutivo DITT revisará la información y responderá con próximos pasos.</p></div>
+  <noscript><p class="form-status is-error">Este formulario necesita JavaScript. Si está desactivado, escríbenos a <a href="mailto:OTL@UNAB.CL">OTL@UNAB.CL</a>.</p></noscript>
   <div class="field field--full"><label for="titulo">Título de la Invención *</label><input id="titulo" name="titulo" required placeholder="Ej. Biosensor de glucosa no invasivo"></div>
   <div class="field"><label for="investigador">Investigador/a responsable *</label><input id="investigador" name="investigador" required placeholder="Nombre y apellido"></div>
   <div class="field"><label for="email">Correo institucional *</label><input id="email" name="email" type="email" required placeholder="nombre@unab.cl"></div>
@@ -51,7 +52,7 @@
   <div class="field field--full"><label for="resumen">Descripción breve *</label><textarea id="resumen" name="resumen" required rows="5" placeholder="Describe el problema que resuelve, el avance técnico y posibles aplicaciones."></textarea></div>
   <div class="field field--full"><label for="aplicaciones">Aplicaciones o sectores de interés</label><input id="aplicaciones" name="aplicaciones" placeholder="Ej. salud, minería, agroindustria, educación"></div>
   <div class="field field--full checkbox-field"><input id="consentimiento" name="consentimiento" type="checkbox" required value="acepto"><label for="consentimiento">Confirmo que la información puede ser usada por DITT para evaluación preliminar y contacto institucional. *</label></div>
-  <div class="honeypot"><label for="website">No completar</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+  <div class="honeypot" aria-hidden="true"><label for="website-postular">No completar</label><input id="website-postular" name="website" tabindex="-1" autocomplete="off"></div>
   <div class="form__actions"><button class="btn btn--primary btn--lg" type="submit">Enviar declaración</button><a class="btn btn--ghost btn--lg" href="/">Cancelar</a></div>
   <p class="form-status" data-form-status aria-live="polite"></p>
 </form></div></section>

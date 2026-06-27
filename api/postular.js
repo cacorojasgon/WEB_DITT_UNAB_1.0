@@ -1,8 +1,13 @@
-const { parseBody, clean, emailOk, json, deliver } = require('./_utils');
+const { parseBody, clean, emailOk, json, cors, clientIp, rateLimit, deliver } = require('./_utils');
 
 module.exports = async function handler(req, res) {
+  cors(req, res);
   if (req.method === 'OPTIONS') return json(res, 200, { ok: true });
   if (req.method !== 'POST') return json(res, 405, { ok: false, error: 'Método no permitido.' });
+
+  if (!rateLimit(clientIp(req)).ok) {
+    return json(res, 429, { ok: false, error: 'Demasiadas solicitudes. Intenta nuevamente en unos minutos.' });
+  }
 
   const body = await parseBody(req);
   if (clean(body.website)) return json(res, 200, { ok: true, id: 'OK' });

@@ -53,6 +53,20 @@ SUBMISSION_TO_EMAIL=
 SUBMISSION_FROM_EMAIL=
 ```
 
+### Seguridad de los endpoints
+
+- **CORS**: las funciones responden con `Access-Control-Allow-Origin` fijado al dominio de
+  producción. Configura `ALLOWED_ORIGIN` para apuntar a tu dominio final:
+
+  ```bash
+  ALLOWED_ORIGIN=https://ditt-unab.vercel.app
+  ```
+
+- **Rate-limit**: cada función limita los envíos por IP (5 cada 10 minutos) como defensa
+  "best-effort" contra ráfagas. En serverless el estado es por instancia y efímero, por lo que
+  no es una garantía absoluta; complementa al honeypot. Para una protección más robusta puede
+  añadirse en el futuro un CAPTCHA (p. ej. Cloudflare Turnstile).
+
 ## Estructura
 
 ```txt
