@@ -31,7 +31,7 @@ module.exports = async function handler(req, res) {
     resumen,
     receivedAt: new Date().toISOString()
   };
-  await deliver('postular', 'Nueva postulación tecnológica DITT UNAB', record);
+  await deliver('declaracion', 'Nueva declaración de invención DITT UNAB', record);
 
-  return json(res, 200, { ok: true, id, message: 'Postulación recibida.' });
+  return json(res, 200, { ok: true, id, message: 'Declaración recibida.' });
 };

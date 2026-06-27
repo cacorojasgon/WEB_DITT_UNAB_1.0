@@ -33,7 +33,7 @@ Don't convert one to the other.
 
 ### Serverless form handling (`api/`)
 
-`api/contact.js` and `api/postular.js` are thin handlers that share `api/_utils.js`. The flow: parse JSON body → honeypot check (`body.website` non-empty ⇒ silently return success) → validate required fields → build a record with a generated `id` → `deliver()`.
+`api/contact.js` and `api/declarar.js` are thin handlers that share `api/_utils.js`. The flow: parse JSON body → honeypot check (`body.website` non-empty ⇒ silently return success) → validate required fields → build a record with a generated `id` → `deliver()`.
 
 `deliver()` in `_utils.js` fans out to optional integrations, all gated by env vars and all non-fatal:
 - **Webhook**: `FORM_WEBHOOK_URL` or `DITT_FORMS_WEBHOOK_URL`
