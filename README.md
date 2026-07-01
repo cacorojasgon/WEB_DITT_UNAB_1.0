@@ -22,6 +22,21 @@ npm run dev
 
 `npm run build` ejecuta la validación de enlaces internos y assets. El sitio ya está construido como archivos estáticos en la raíz del proyecto.
 
+## Portafolio de tecnologías
+
+Las páginas de `/portafolio` (grid, filtros, ficha por tecnología y las 3 destacadas del home) se generan con `scripts/build-portfolio.mjs` a partir de fichas `.md` (formato: plantilla institucional de fichas) en `content/fichas/`, carpeta que **no** se sube al repositorio (ver `.gitignore`) porque las fichas suelen traer datos de contacto y notas internas "no publicar".
+
+Flujo para cargar o actualizar tecnologías:
+
+```bash
+# 1. coloca/actualiza los .md en content/fichas/
+npm run portfolio   # regenera portafolio/, el home y sitemap.xml
+npm run validate
+git add portafolio/ index.html sitemap.xml && git commit -m "..."
+```
+
+Este paso es local: `npm run build` (el que corre Vercel) no depende de `content/fichas/`, solo valida y copia el HTML ya generado y commiteado.
+
 ## Deploy en Vercel
 
 Configuración recomendada:
