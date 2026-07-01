@@ -20,7 +20,7 @@ const staticEntries = [
   'assets',
   'servicios',
   'portafolio',
-  'postular',
+  'declarar',
   'contacto',
   'recursos',
   'institucional',

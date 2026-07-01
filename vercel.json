@@ -50,6 +50,21 @@
       "source": "/home",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/postular",
+      "destination": "/declarar",
+      "permanent": true
+    },
+    {
+      "source": "/postular/gracias",
+      "destination": "/declarar/gracias",
+      "permanent": true
+    },
+    {
+      "source": "/recursos/bases-postulacion",
+      "destination": "/recursos/declarar-invencion",
+      "permanent": true
     }
   ]
 }

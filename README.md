@@ -5,11 +5,11 @@ Implementacióndel sitio público de la Dirección de Innovación y Transferenci
 ## Qué incluye
 
 - Sitio estático sin dependencias externas de build.
-- Rutas reales para Inicio, Servicios, Portafolio, Postulación, Contacto, Recursos, páginas institucionales, Privacidad y Accesibilidad.
+- Rutas reales para Inicio, Servicios, Portafolio, Declaración de invención, Contacto, Recursos, páginas institucionales, Privacidad y Accesibilidad.
 - Subpáginas de servicios y fichas individuales de tecnologías.
 - Header y footer con enlaces reales.
 - Menú mobile accesible, filtros de portafolio y formularios progresivos con validación.
-- Funciones serverless para Vercel en `/api/contact` y `/api/postular`.
+- Funciones serverless para Vercel en `/api/contact` y `/api/declarar`.
 - Assets optimizados localmente, favicon, Open Graph, sitemap y robots.txt.
 
 ## Comandos
@@ -36,7 +36,7 @@ Configuración recomendada:
 Los formularios llaman a:
 
 - `POST /api/contact`
-- `POST /api/postular`
+- `POST /api/declarar`
 
 Por defecto validan datos, generan una referencia y responden correctamente. Para reenviar los datos a un CRM, Make, Zapier, Google Apps Script u otro endpoint, configura una de estas variables de entorno en Vercel:
 
@@ -103,7 +103,7 @@ logs de Vercel a nivel `error` (`[contact] SIN ENTREGA...`) para que ninguna pos
   index.html
   servicios/
   portafolio/
-  postular/
+  declarar/
   contacto/
   recursos/
   institucional/
