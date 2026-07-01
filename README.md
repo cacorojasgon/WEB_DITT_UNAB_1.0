@@ -45,13 +45,56 @@ FORM_WEBHOOK_URL=https://tu-endpoint.example/webhook
 DITT_FORMS_WEBHOOK_URL=https://tu-endpoint.example/webhook
 ```
 
-También puedes enviar correos mediante Resend configurando:
+### Entrega por correo a OTL@UNAB.CL (conector Resend de Vercel)
+
+Las funciones usan **Resend** como conector de correo. Para activarlo:
+
+1. En el panel del proyecto Vercel (`web-ditt-unab-1-0`) → pestaña **Integrations** →
+   **Browse Marketplace** → **Resend** → **Add Integration**, y vincúlala a este proyecto.
+   Esto crea automáticamente la variable `RESEND_API_KEY` en el proyecto.
+   (Alternativa manual: crea la API key en resend.com y agrégala en
+   **Settings → Environment Variables** como `RESEND_API_KEY`.)
+2. **Verifica un dominio remitente** en Resend (Domains → Add Domain, p. ej. `unab.cl` o un
+   subdominio como `mail.ditt.unab.cl`) y publica los registros DNS que indica. Esto es
+   **obligatorio para entregar a buzones externos** como `OTL@UNAB.CL`.
+3. Configura las variables del remitente/destinatario en Vercel
+   (**Settings → Environment Variables**, target *Production*):
+
+   ```bash
+   RESEND_API_KEY=re_...            # la crea el conector del Marketplace
+   SUBMISSION_FROM_EMAIL=DITT UNAB <notificaciones@TU-DOMINIO-VERIFICADO>
+   SUBMISSION_TO_EMAIL=OTL@UNAB.CL  # opcional; OTL@UNAB.CL es el valor por defecto
+   ```
+
+4. Vuelve a desplegar (**Deployments → Redeploy**) para que las funciones tomen las variables.
+
+> **Modo de prueba sin dominio:** si dejas el remitente por defecto
+> (`onboarding@resend.dev`), Resend en modo prueba **solo entrega al correo dueño de la cuenta
+> Resend**, no a terceros. Sirve para validar el flujo, pero para llegar a `OTL@UNAB.CL` en
+> producción necesitas el paso 2 (dominio verificado).
+
+Alternativa o complemento (CRM, Make, Zapier, Google Apps Script): reenvío por webhook con
 
 ```bash
-RESEND_API_KEY=
-SUBMISSION_TO_EMAIL=
-SUBMISSION_FROM_EMAIL=
+FORM_WEBHOOK_URL=https://tu-endpoint.example/webhook
 ```
+
+Si **ningún** canal está configurado o todos fallan, la función registra el envío completo en los
+logs de Vercel a nivel `error` (`[contact] SIN ENTREGA...`) para que ninguna postulación se pierda.
+
+### Seguridad de los endpoints
+
+- **CORS**: las funciones responden con `Access-Control-Allow-Origin` fijado al dominio de
+  producción. Configura `ALLOWED_ORIGIN` para apuntar a tu dominio final:
+
+  ```bash
+  ALLOWED_ORIGIN=https://ditt-unab.vercel.app
+  ```
+
+- **Rate-limit**: cada función limita los envíos por IP (5 cada 10 minutos) como defensa
+  "best-effort" contra ráfagas. En serverless el estado es por instancia y efímero, por lo que
+  no es una garantía absoluta; complementa al honeypot. Para una protección más robusta puede
+  añadirse en el futuro un CAPTCHA (p. ej. Cloudflare Turnstile).
 
 ## Estructura
 

@@ -1,0 +1,7 @@
+# Build output (generado por `npm run build`)
+public/
+
+# Dependencias y logs
+node_modules/
+npm-debug.log*
+.vercel

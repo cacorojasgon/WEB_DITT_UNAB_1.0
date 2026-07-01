@@ -42,11 +42,12 @@
 <section class="section"><div class="container contact-grid"><div><div class="contact-list"><article><span>Correo</span><a href="mailto:OTL@UNAB.CL">OTL@UNAB.CL</a></article><article><span>Teléfono</span><a href="tel:+56226618000">+56 2 2661 8000</a></article><article><span>Dirección</span><a href="https://www.google.com/maps/search/?api=1&query=Rep%C3%BAblica%20239%2C%20Santiago%2C%20Chile" rel="noopener" target="_blank">República 239, Santiago, Chile</a></article><article><span>Horario</span><p>Lunes a viernes · 9:00–18:00</p></article></div></div><form class="card form form--navy" data-async-form data-endpoint="/api/contact" novalidate>
   <img src="/assets/images/logos/unab-iso-white.png" alt="Universidad Andrés Bello" width="72" height="61" class="form-logo">
   <h2>Escríbenos directamente</h2>
+  <noscript><p class="form-status is-error">Este formulario necesita JavaScript. Si está desactivado, escríbenos a <a href="mailto:OTL@UNAB.CL">OTL@UNAB.CL</a>.</p></noscript>
   <div class="field"><label for="nombre">Nombre *</label><input id="nombre" name="nombre" required placeholder="Tu nombre"></div>
   <div class="field"><label for="correo">Correo *</label><input id="correo" name="email" type="email" required placeholder="tu.correo@empresa.cl"></div>
   <div class="field"><label for="motivo">Motivo</label><select id="motivo" name="motivo"><option>Propiedad intelectual</option><option>Licenciamiento</option><option>Spin-off</option><option>Empresa interesada</option><option>Prensa o difusión</option><option>Otro</option></select></div>
   <div class="field"><label for="mensaje">Mensaje *</label><textarea id="mensaje" name="mensaje" required rows="4" placeholder="Cuéntanos cómo podemos ayudarte."></textarea></div>
-  <div class="honeypot"><label for="website-contacto">No completar</label><input id="website-contacto" name="website" tabindex="-1" autocomplete="off"></div>
+  <div class="honeypot" aria-hidden="true"><label for="website-contacto">No completar</label><input id="website-contacto" name="website" tabindex="-1" autocomplete="off"></div>
   <button class="btn btn--primary btn--full" type="submit">Enviar mensaje</button><p class="form-status" data-form-status aria-live="polite"></p>
 </form></div></section>
 </main>
