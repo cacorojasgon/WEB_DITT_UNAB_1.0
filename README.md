@@ -24,7 +24,7 @@ npm run dev
 
 ## Portafolio de tecnologías
 
-Las páginas de `/portafolio` (grid, filtros, ficha por tecnología y las 3 destacadas del home) se generan con `scripts/build-portfolio.mjs` a partir de fichas `.md` (formato: plantilla institucional de fichas) en `content/fichas/`, carpeta que **no** se sube al repositorio (ver `.gitignore`) porque las fichas suelen traer datos de contacto y notas internas "no publicar".
+Las páginas de `/portafolio` (grid, filtros, ficha por tecnología y las 3 destacadas del home) se generan con `scripts/build-portfolio.mjs` a partir de fichas `.md` (formato: plantilla institucional de fichas) en `content/fichas/`. El generador solo lee el bloque ` ``` `...` ``` ` de cada ficha: cualquier nota, análisis de mercado o comentario editorial que se agregue fuera de ese bloque nunca se publica en el sitio, pero si igual no debe quedar en el repo (información competitiva, borradores, etc.), hay que quitarlo del `.md` antes de comitear.
 
 Flujo para cargar o actualizar tecnologías:
 
@@ -32,7 +32,7 @@ Flujo para cargar o actualizar tecnologías:
 # 1. coloca/actualiza los .md en content/fichas/
 npm run portfolio   # regenera portafolio/, el home y sitemap.xml
 npm run validate
-git add portafolio/ index.html sitemap.xml && git commit -m "..."
+git add content/fichas/ portafolio/ index.html sitemap.xml && git commit -m "..."
 ```
 
 Este paso es local: `npm run build` (el que corre Vercel) no depende de `content/fichas/`, solo valida y copia el HTML ya generado y commiteado.

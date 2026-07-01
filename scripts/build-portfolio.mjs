@@ -4,9 +4,10 @@
 //
 // Uso: node scripts/build-portfolio.mjs   (o `npm run portfolio`)
 //
-// content/fichas/*.md nunca se publica (ver .gitignore): puede contener
-// notas internas y datos de contacto que el parser ignora a propósito, ya
-// que solo lee el bloque ```...``` de cada ficha.
+// El sitio nunca publica más que el bloque ```...``` de cada ficha: cualquier
+// nota o comentario que se agregue fuera de ese bloque en el .md se ignora
+// al generar, pero igual queda en el repo si el archivo se commitea, así que
+// no debe contener información que no deba subirse a un repositorio público.
 import fs from 'fs';
 import path from 'path';
 
