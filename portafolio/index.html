@@ -42,67 +42,172 @@
 <section class="section"><div class="container">
   <div class="filters" data-filters>
     <label class="search-field"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span><input type="search" data-search placeholder="Buscar por tecnología, facultad o aplicación" aria-label="Buscar en portafolio"></label>
-    <label><span>Área</span><select data-area><option value="Todas">Todas</option><option value="Salud digital">Salud digital</option><option value="Materiales">Materiales</option><option value="Energía y sostenibilidad">Energía y sostenibilidad</option><option value="Ingeniería aplicada">Ingeniería aplicada</option></select></label>
-    <label><span>Estado</span><select data-status><option value="Todos">Todos</option><option value="Licenciable">Licenciable</option><option value="Spin-off">Spin-off</option><option value="Patente concedida">Patente concedida</option><option value="En trámite">En trámite</option><option value="En evaluación">En evaluación</option></select></label>
+    <label><span>Área</span><select data-area><!--PORTFOLIO:AREA_OPTIONS--><option value="Todas">Todas</option><option value="Salud y Bienestar">Salud y Bienestar</option><option value="Seguridad y Estudios Migratorios">Seguridad y Estudios Migratorios</option><option value="TICs">TICs</option><option value="Ambiente y Sustentabilidad">Ambiente y Sustentabilidad</option><option value="Transición Energética">Transición Energética</option><option value="AgTech, FoodTech y Bioeconomía">AgTech, FoodTech y Bioeconomía</option><option value="Fomento al Emprendimiento, Innovación y Desarrollo Productivo">Fomento al Emprendimiento, Innovación y Desarrollo Productivo</option><option value="Industrias Creativas, Patrimonio y Turismo">Industrias Creativas, Patrimonio y Turismo</option><option value="EdTech y Desarrollo de Capital Humano">EdTech y Desarrollo de Capital Humano</option><option value="Futuro del Trabajo (WorkTech)">Futuro del Trabajo (WorkTech)</option><option value="Manufactura Avanzada e Industria 4.0">Manufactura Avanzada e Industria 4.0</option><option value="FinTech y Economía Digital">FinTech y Economía Digital</option><option value="Construcción, Infraestructura y PropTech">Construcción, Infraestructura y PropTech</option><option value="Movilidad, Logística e Infraestructura Urbana">Movilidad, Logística e Infraestructura Urbana</option><option value="Industria Extractiva">Industria Extractiva</option><!--/PORTFOLIO:AREA_OPTIONS--></select></label>
+    <label><span>Estado</span><select data-status><!--PORTFOLIO:STATUS_OPTIONS--><option value="Todos">Todos</option><option value="Licenciable">Licenciable</option><option value="Spin-off / EBCT">Spin-off / EBCT</option><option value="Servicio tecnológico">Servicio tecnológico</option><option value="En negociación">En negociación</option><option value="En evaluación">En evaluación</option><!--/PORTFOLIO:STATUS_OPTIONS--></select></label>
   </div>
-  <p class="result-count" data-result-count>8 tecnologías disponibles</p>
-  <div class="card-grid card-grid--3 portfolio-grid" data-portfolio-grid><article class="card card--tech" data-tech-card data-title="biosensor de glucosa no invasivo" data-area="Salud digital" data-status="Licenciable" data-faculty="Facultad de Ingeniería" data-trl="6">
-    <div class="tech-card__top"><span class="badge badge--success">Licenciable</span><span class="trl">TRL 6</span></div>
-    <h3>Biosensor de glucosa no invasivo</h3>
-    <p class="muted">Facultad de Ingeniería</p>
-    <p>Dispositivo de monitoreo orientado a reducir la fricción del control glucémico mediante señales ópticas y análisis de datos.</p>
-    <div class="tag-row"><span>Salud digital</span><span>Salud digital</span><span>Monitoreo domiciliario</span></div>
-    <a class="link-arrow" href="/portafolio/biosensor-glucosa-no-invasivo">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-  </article><article class="card card--tech" data-tech-card data-title="plataforma de diagnóstico asistido por ia" data-area="Salud digital" data-status="Spin-off" data-faculty="Facultad de Ciencias de la Vida" data-trl="7">
-    <div class="tech-card__top"><span class="badge badge--navy">Spin-off</span><span class="trl">TRL 7</span></div>
-    <h3>Plataforma de diagnóstico asistido por IA</h3>
-    <p class="muted">Facultad de Ciencias de la Vida</p>
-    <p>Sistema de apoyo a decisiones clínicas que combina análisis de imágenes, priorización de casos y paneles de trazabilidad.</p>
-    <div class="tag-row"><span>Salud digital</span><span>Diagnóstico asistido</span><span>Teleradiología</span></div>
-    <a class="link-arrow" href="/portafolio/plataforma-diagnostico-asistido-ia">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-  </article><article class="card card--tech" data-tech-card data-title="recubrimiento antimicrobiano de cobre" data-area="Materiales" data-status="Patente concedida" data-faculty="Facultad de Ciencias Exactas" data-trl="5">
-    <div class="tech-card__top"><span class="badge badge--red">Patente concedida</span><span class="trl">TRL 5</span></div>
-    <h3>Recubrimiento antimicrobiano de cobre</h3>
-    <p class="muted">Facultad de Ciencias Exactas</p>
-    <p>Recubrimiento funcional para superficies de alto contacto, diseñado para reducir carga microbiana en ambientes críticos.</p>
-    <div class="tag-row"><span>Materiales</span><span>Salud</span><span>Transporte</span></div>
-    <a class="link-arrow" href="/portafolio/recubrimiento-antimicrobiano-cobre">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-  </article><article class="card card--tech" data-tech-card data-title="microalgas para captura de co₂" data-area="Energía y sostenibilidad" data-status="En trámite" data-faculty="Facultad de Ciencias de la Vida" data-trl="4">
-    <div class="tech-card__top"><span class="badge badge--warning">En trámite</span><span class="trl">TRL 4</span></div>
-    <h3>Microalgas para captura de CO₂</h3>
-    <p class="muted">Facultad de Ciencias de la Vida</p>
-    <p>Sistema biotecnológico para captura de carbono y valorización de biomasa en procesos industriales.</p>
-    <div class="tag-row"><span>Energía y sostenibilidad</span><span>Energía</span><span>Minería</span></div>
-    <a class="link-arrow" href="/portafolio/microalgas-captura-co2">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-  </article><article class="card card--tech" data-tech-card data-title="sistema de monitoreo sísmico de bajo costo" data-area="Ingeniería aplicada" data-status="Licenciable" data-faculty="Facultad de Ingeniería" data-trl="6">
-    <div class="tech-card__top"><span class="badge badge--success">Licenciable</span><span class="trl">TRL 6</span></div>
-    <h3>Sistema de monitoreo sísmico de bajo costo</h3>
-    <p class="muted">Facultad de Ingeniería</p>
-    <p>Red de sensores para captura y análisis de vibraciones orientada a infraestructura crítica y comunidades.</p>
-    <div class="tag-row"><span>Ingeniería aplicada</span><span>Infraestructura</span><span>Municipios</span></div>
-    <a class="link-arrow" href="/portafolio/monitoreo-sismico-bajo-costo">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-  </article><article class="card card--tech" data-tech-card data-title="bioinsumo agrícola a partir de residuos" data-area="Energía y sostenibilidad" data-status="Patente concedida" data-faculty="Facultad de Ciencias de la Vida" data-trl="5">
-    <div class="tech-card__top"><span class="badge badge--red">Patente concedida</span><span class="trl">TRL 5</span></div>
-    <h3>Bioinsumo agrícola a partir de residuos</h3>
-    <p class="muted">Facultad de Ciencias de la Vida</p>
-    <p>Proceso de valorización de residuos orgánicos para generar insumos agrícolas con enfoque de economía circular.</p>
-    <div class="tag-row"><span>Energía y sostenibilidad</span><span>Agroindustria</span><span>Economía circular</span></div>
-    <a class="link-arrow" href="/portafolio/bioinsumo-agricola-residuos">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-  </article><article class="card card--tech" data-tech-card data-title="sistema de rehabilitación remota con sensores" data-area="Salud digital" data-status="En evaluación" data-faculty="Facultad de Ciencias de la Rehabilitación" data-trl="5">
+  <p class="result-count" data-result-count><!--PORTFOLIO:COUNT-->23 tecnologías disponibles<!--/PORTFOLIO:COUNT--></p>
+  <div class="card-grid card-grid--3 portfolio-grid" data-portfolio-grid><!--PORTFOLIO:GRID--><article class="card card--tech" data-tech-card data-title="quida" data-area="Salud y Bienestar" data-status="Licenciable" data-faculty="Facultad de Ingeniería (UNAB), en colaboración con la Universidad de Valparaíso (UV)." data-trl="7">
+    <div class="tech-card__top"><span class="badge badge--success">Licenciable</span><span class="trl">TRL 7</span></div>
+    <h3>QUIDA</h3>
+    <p class="muted">Facultad de Ingeniería (UNAB), en colaboración con la Universidad de Valparaíso (UV).</p>
+    <p>Sensores no invasivos y alertas automáticas que anticipan caídas y emergencias de personas mayores en el hogar, sin cámaras ni dispositivos corporales. Validado clínicamente en Chile.</p>
+    <div class="tag-row"><span>Salud y Bienestar</span><span>Salud digital</span><span>Teleasistencia</span></div>
+    <a class="link-arrow" href="/portafolio/quida">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 1" data-tech-card data-title="cobalto verde" data-area="Industria Extractiva" data-status="En negociación" data-faculty="Facultad de Ciencias de la Vida (UNAB), en cotitularidad con la Universidad de Chile." data-trl="5">
+    <div class="tech-card__top"><span class="badge badge--warning">En negociación</span><span class="trl">TRL 5</span></div>
+    <h3>Cobalto Verde</h3>
+    <p class="muted">Facultad de Ciencias de la Vida (UNAB), en cotitularidad con la Universidad de Chile.</p>
+    <p>Consorcio de bacterias que recupera cobalto, níquel, zinc y hierro desde relaves mineros, reduciendo el consumo energético y los pasivos ambientales del reprocesamiento minero.</p>
+    <div class="tag-row"><span>Industria Extractiva</span><span>Minería</span><span>Reprocesamiento de relaves</span></div>
+    <a class="link-arrow" href="/portafolio/cobalto-verde">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 2" data-tech-card data-title="conciencia logística" data-area="Movilidad, Logística e Infraestructura Urbana" data-status="Spin-off / EBCT" data-faculty="Facultad de Ingeniería (UNAB)." data-trl="9">
+    <div class="tech-card__top"><span class="badge badge--navy">Spin-off / EBCT</span><span class="trl">TRL 9</span></div>
+    <h3>Conciencia Logística</h3>
+    <p class="muted">Facultad de Ingeniería (UNAB).</p>
+    <p>Plataforma de datos GPS y analítica geoespacial que optimiza la logística urbana de carga, reduce costos y emisiones, y apoya la planificación pública y privada del transporte.</p>
+    <div class="tag-row"><span>Movilidad, Logística e Infraestructura Urbana</span><span>Logística urbana</span><span>Última milla</span></div>
+    <a class="link-arrow" href="/portafolio/conciencia-logistica">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 3" data-tech-card data-title="adhesivo biomimético" data-area="Ambiente y Sustentabilidad" data-status="En evaluación" data-faculty="Facultad de Ciencias de la Vida (UNAB), con participación de la Facultad de Medicina." data-trl="5">
     <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 5</span></div>
-    <h3>Sistema de rehabilitación remota con sensores</h3>
-    <p class="muted">Facultad de Ciencias de la Rehabilitación</p>
-    <p>Plataforma para seguimiento de ejercicios de rehabilitación mediante sensores y reportes para equipos clínicos.</p>
-    <div class="tag-row"><span>Salud digital</span><span>Rehabilitación</span><span>Telemedicina</span></div>
-    <a class="link-arrow" href="/portafolio/rehabilitacion-remota-sensores">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-  </article><article class="card card--tech" data-tech-card data-title="membrana para filtración avanzada de aguas" data-area="Materiales" data-status="En trámite" data-faculty="Facultad de Ciencias Exactas" data-trl="4">
-    <div class="tech-card__top"><span class="badge badge--warning">En trámite</span><span class="trl">TRL 4</span></div>
-    <h3>Membrana para filtración avanzada de aguas</h3>
-    <p class="muted">Facultad de Ciencias Exactas</p>
-    <p>Material funcional para procesos de filtración orientados a remoción selectiva de contaminantes en aguas.</p>
-    <div class="tag-row"><span>Materiales</span><span>Agua</span><span>Minería</span></div>
-    <a class="link-arrow" href="/portafolio/membrana-filtracion-aguas">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-  </article></div>
+    <h3>Adhesivo Biomimético</h3>
+    <p class="muted">Facultad de Ciencias de la Vida (UNAB), con participación de la Facultad de Medicina.</p>
+    <p>Adhesivo biodegradable inspirado en mejillones que fija algas y sustratos naturales bajo el agua, sin plásticos, para restaurar y repoblar bosques de algas marinas.</p>
+    <div class="tag-row"><span>Ambiente y Sustentabilidad</span><span>Acuicultura</span><span>Restauración marina</span></div>
+    <a class="link-arrow" href="/portafolio/adhesivo-biomimetico">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 4" data-tech-card data-title="asesor virtual de insolvencia" data-area="TICs" data-status="Servicio tecnológico" data-faculty="Facultad de Derecho (UNAB)." data-trl="6">
+    <div class="tech-card__top"><span class="badge badge--red">Servicio tecnológico</span><span class="trl">TRL 6</span></div>
+    <h3>Asesor Virtual de Insolvencia</h3>
+    <p class="muted">Facultad de Derecho (UNAB).</p>
+    <p>Asesor virtual con inteligencia artificial que orienta gratuitamente a personas naturales sobre insolvencia y reorganización (Ley 20.720), ya operando en el portal de SUPERIR.</p>
+    <div class="tag-row"><span>TICs</span><span>GovTech</span><span>LegalTech</span></div>
+    <a class="link-arrow" href="/portafolio/asesor-virtual-de-insolvencia">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 5" data-tech-card data-title="contigo" data-area="Salud y Bienestar" data-status="En evaluación" data-faculty="Facultad de Ingeniería (UNAB), en colaboración con la Pontificia Universidad Católica de Chile (PUC)." data-trl="5">
+    <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 5</span></div>
+    <h3>CONTIGO</h3>
+    <p class="muted">Facultad de Ingeniería (UNAB), en colaboración con la Pontificia Universidad Católica de Chile (PUC).</p>
+    <p>Plataforma web y móvil que recoge la experiencia reportada por pacientes oncológicos y la convierte en reportes clínicos automatizados para el equipo médico tratante.</p>
+    <div class="tag-row"><span>Salud y Bienestar</span><span>Salud digital</span><span>Oncología</span></div>
+    <a class="link-arrow" href="/portafolio/contigo">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 6" data-tech-card data-title="control de polvo" data-area="Industria Extractiva" data-status="En evaluación" data-faculty="Facultad de Ciencias de la Vida (UNAB)." data-trl="7">
+    <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 7</span></div>
+    <h3>Control de Polvo</h3>
+    <p class="muted">Facultad de Ciencias de la Vida (UNAB).</p>
+    <p>Formulación biodegradable de nanoburbujas que reduce en más de un 87% las emisiones de polvo fino en faenas mineras con una sola aplicación, usando equipos existentes.</p>
+    <div class="tag-row"><span>Industria Extractiva</span><span>Minería</span><span>Control ambiental</span></div>
+    <a class="link-arrow" href="/portafolio/control-de-polvo">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 7" data-tech-card data-title="¡estadísticalo!" data-area="EdTech y Desarrollo de Capital Humano" data-status="En evaluación" data-faculty="Facultad de Ciencias de la Rehabilitación (UNAB)." data-trl="7">
+    <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 7</span></div>
+    <h3>¡Estadísticalo!</h3>
+    <p class="muted">Facultad de Ciencias de la Rehabilitación (UNAB).</p>
+    <p>Juego de 165 cartas que convierte el aprendizaje de bioestadística —una de las asignaturas con mayor tasa de reprobación en salud— en una experiencia interactiva y progresiva.</p>
+    <div class="tag-row"><span>EdTech y Desarrollo de Capital Humano</span><span>EdTech</span><span>Educación en salud</span></div>
+    <a class="link-arrow" href="/portafolio/estadisticalo">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 8" data-tech-card data-title="exhalapp" data-area="Salud y Bienestar" data-status="En evaluación" data-faculty="Facultad de Ingeniería (UNAB), con participación de la Facultad de Ciencias de la Rehabilitación." data-trl="4">
+    <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 4</span></div>
+    <h3>Exhalapp</h3>
+    <p class="muted">Facultad de Ingeniería (UNAB), con participación de la Facultad de Ciencias de la Rehabilitación.</p>
+    <p>Dispositivo portátil que separa y analiza el aire exhalado en tiempo real para apoyar el diagnóstico y seguimiento de enfermedades respiratorias como EPOC y asma.</p>
+    <div class="tag-row"><span>Salud y Bienestar</span><span>Salud digital</span><span>Diagnóstico respiratorio</span></div>
+    <a class="link-arrow" href="/portafolio/exhalapp">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 9" data-tech-card data-title="fisiología del perro" data-area="EdTech y Desarrollo de Capital Humano" data-status="En evaluación" data-faculty="Vicerrectoría Académica (UNAB) — Hospital de Simulación." data-trl="4">
+    <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 4</span></div>
+    <h3>Fisiología del Perro</h3>
+    <p class="muted">Vicerrectoría Académica (UNAB) — Hospital de Simulación.</p>
+    <p>Software 3D interactivo que simula la fisiología del perro para la enseñanza veterinaria, reduciendo la dependencia de animales vivos en la formación práctica.</p>
+    <div class="tag-row"><span>EdTech y Desarrollo de Capital Humano</span><span>EdTech veterinario</span><span>Simulación 3D</span></div>
+    <a class="link-arrow" href="/portafolio/fisiologia-del-perro">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 10" data-tech-card data-title="gesca+" data-area="Salud y Bienestar" data-status="En evaluación" data-faculty="Facultad de Ingeniería (UNAB)." data-trl="6">
+    <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 6</span></div>
+    <h3>GESCA+</h3>
+    <p class="muted">Facultad de Ingeniería (UNAB).</p>
+    <p>Plataforma con inteligencia artificial e IoT que visualiza en tiempo real el ciclo de camas hospitalarias, identificando cuellos de botella y agilizando traslados de pacientes.</p>
+    <div class="tag-row"><span>Salud y Bienestar</span><span>Gestión hospitalaria</span><span>Salud digital</span></div>
+    <a class="link-arrow" href="/portafolio/gesca">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 11" data-tech-card data-title="gas en polvo" data-area="AgTech, FoodTech y Bioeconomía" data-status="Licenciable" data-faculty="Facultad de Ciencias de la Vida (UNAB), en colaboración con la Universidad de Chile." data-trl="7">
+    <div class="tech-card__top"><span class="badge badge--success">Licenciable</span><span class="trl">TRL 7</span></div>
+    <h3>Gas en Polvo</h3>
+    <p class="muted">Facultad de Ciencias de la Vida (UNAB), en colaboración con la Universidad de Chile.</p>
+    <p>Biofungicida encapsulado en biopolímeros que libera gradualmente compuestos antifúngicos seguros, protegiendo fruta de exportación de la pudrición hasta por 60 días sin usar SO₂.</p>
+    <div class="tag-row"><span>AgTech, FoodTech y Bioeconomía</span><span>Agroexportación</span><span>Postcosecha</span></div>
+    <a class="link-arrow" href="/portafolio/gas-en-polvo">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 12" data-tech-card data-title="graama" data-area="Industrias Creativas, Patrimonio y Turismo" data-status="En negociación" data-faculty="Facultad de Ingeniería (UNAB)." data-trl="9">
+    <div class="tech-card__top"><span class="badge badge--warning">En negociación</span><span class="trl">TRL 9</span></div>
+    <h3>Graama</h3>
+    <p class="muted">Facultad de Ingeniería (UNAB).</p>
+    <p>Plataforma digital y book de locaciones que centraliza información logística, técnica y de servicios para facilitar rodajes en la Región del Biobío.</p>
+    <div class="tag-row"><span>Industrias Creativas, Patrimonio y Turismo</span><span>Industrias creativas</span><span>Turismo cultural</span></div>
+    <a class="link-arrow" href="/portafolio/graama">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 13" data-tech-card data-title="gracilex" data-area="AgTech, FoodTech y Bioeconomía" data-status="En evaluación" data-faculty="Facultad de Medicina (UNAB), con participación de la Facultad de Ciencias de la Vida; desarrollado junto a la PUC y la USS." data-trl="5">
+    <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 5</span></div>
+    <h3>Gracilex</h3>
+    <p class="muted">Facultad de Medicina (UNAB), con participación de la Facultad de Ciencias de la Vida; desarrollado junto a la PUC y la USS.</p>
+    <p>Extracto lipídico del alga chilena Gracilaria chilensis que mejora la sensibilidad a la insulina, para uso en suplementos y alimentos funcionales.</p>
+    <div class="tag-row"><span>AgTech, FoodTech y Bioeconomía</span><span>Nutracéutica</span><span>Alimentos funcionales</span></div>
+    <a class="link-arrow" href="/portafolio/gracilex">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 14" data-tech-card data-title="mírame" data-area="Salud y Bienestar" data-status="En evaluación" data-faculty="Facultad de Ciencias de la Rehabilitación (UNAB)." data-trl="8">
+    <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 8</span></div>
+    <h3>Mírame</h3>
+    <p class="muted">Facultad de Ciencias de la Rehabilitación (UNAB).</p>
+    <p>Programa universitario de más de una década que combina educación en salud y acompañamiento psicoemocional para fortalecer el bienestar de mujeres con cáncer de mama.</p>
+    <div class="tag-row"><span>Salud y Bienestar</span><span>Salud y bienestar</span><span>Oncología</span></div>
+    <a class="link-arrow" href="/portafolio/mirame">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 15" data-tech-card data-title="pelón de nuez" data-area="AgTech, FoodTech y Bioeconomía" data-status="En negociación" data-faculty="Facultad de Ciencias de la Vida (UNAB)." data-trl="5">
+    <div class="tech-card__top"><span class="badge badge--warning">En negociación</span><span class="trl">TRL 5</span></div>
+    <h3>Pelón de Nuez</h3>
+    <p class="muted">Facultad de Ciencias de la Vida (UNAB).</p>
+    <p>Conservante natural microencapsulado a partir de residuos de pelón y hojas de nogal, que prolonga la vida útil de alimentos grasos con etiqueta limpia (clean label).</p>
+    <div class="tag-row"><span>AgTech, FoodTech y Bioeconomía</span><span>Industria alimentaria</span><span>Clean label</span></div>
+    <a class="link-arrow" href="/portafolio/pelon-de-nuez">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 16" data-tech-card data-title="planta efecto dual" data-area="Ambiente y Sustentabilidad" data-status="En evaluación" data-faculty="Facultad de Ciencias de la Vida (UNAB)." data-trl="6">
+    <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 6</span></div>
+    <h3>Planta Efecto Dual</h3>
+    <p class="muted">Facultad de Ciencias de la Vida (UNAB).</p>
+    <p>Planta modular que usa energía solar para eliminar hasta un 90% de contaminantes emergentes en aguas residuales, sin químicos adicionales.</p>
+    <div class="tag-row"><span>Ambiente y Sustentabilidad</span><span>Tratamiento de aguas</span><span>Energía solar</span></div>
+    <a class="link-arrow" href="/portafolio/planta-efecto-dual">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 17" data-tech-card data-title="plataforma nanobodies" data-area="Salud y Bienestar" data-status="En evaluación" data-faculty="Facultad de Ciencias de la Vida (UNAB) — Centro de Bioinformática y Biología Integrativa (CBIB)." data-trl="3">
+    <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 3</span></div>
+    <h3>Plataforma Nanobodies</h3>
+    <p class="muted">Facultad de Ciencias de la Vida (UNAB) — Centro de Bioinformática y Biología Integrativa (CBIB).</p>
+    <p>Plataforma de diseño computacional que reduce de meses a semanas el desarrollo de nanoanticuerpos (nanobodies) personalizados para terapias, diagnósticos y control de patógenos.</p>
+    <div class="tag-row"><span>Salud y Bienestar</span><span>Biotecnología</span><span>Diagnóstico</span></div>
+    <a class="link-arrow" href="/portafolio/plataforma-nanobodies">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 18" data-tech-card data-title="rescol" data-area="Movilidad, Logística e Infraestructura Urbana" data-status="Servicio tecnológico" data-faculty="Facultad de Ingeniería (UNAB), en colaboración con la Pontificia Universidad Católica de Valparaíso (PUCV)." data-trl="6">
+    <div class="tech-card__top"><span class="badge badge--red">Servicio tecnológico</span><span class="trl">TRL 6</span></div>
+    <h3>RESCOL</h3>
+    <p class="muted">Facultad de Ingeniería (UNAB), en colaboración con la Pontificia Universidad Católica de Valparaíso (PUCV).</p>
+    <p>Herramienta de código abierto que optimiza rutas de recolección de residuos entre municipalidades, reduciendo significativamente el costo unitario de recolección.</p>
+    <div class="tag-row"><span>Movilidad, Logística e Infraestructura Urbana</span><span>Gestión municipal</span><span>Economía circular</span></div>
+    <a class="link-arrow" href="/portafolio/rescol">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 19" data-tech-card data-title="red de museos digitales" data-area="Industrias Creativas, Patrimonio y Turismo" data-status="En evaluación" data-faculty="Facultad de Ingeniería (UNAB)." data-trl="7">
+    <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 7</span></div>
+    <h3>Red de Museos Digitales</h3>
+    <p class="muted">Facultad de Ingeniería (UNAB).</p>
+    <p>Red de museos digitales con realidad aumentada, modelado 3D y gamificación, personalizada por territorio para dinamizar el turismo y la identidad cultural local.</p>
+    <div class="tag-row"><span>Industrias Creativas, Patrimonio y Turismo</span><span>Patrimonio digital</span><span>Turismo cultural</span></div>
+    <a class="link-arrow" href="/portafolio/red-de-museos-digitales">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 20" data-tech-card data-title="relaq" data-area="Salud y Bienestar" data-status="En negociación" data-faculty="Facultad de Ingeniería (UNAB), desarrollado junto a la Corporación de Ayuda al Niño Quemado (COANIQUEM)." data-trl="5">
+    <div class="tech-card__top"><span class="badge badge--warning">En negociación</span><span class="trl">TRL 5</span></div>
+    <h3>RELAQ</h3>
+    <p class="muted">Facultad de Ingeniería (UNAB), desarrollado junto a la Corporación de Ayuda al Niño Quemado (COANIQUEM).</p>
+    <p>Plataforma colaborativa que centraliza el registro clínico y epidemiológico de pacientes quemados en América Latina, ya operativa en 6 países.</p>
+    <div class="tag-row"><span>Salud y Bienestar</span><span>Salud digital</span><span>Epidemiología regional</span></div>
+    <a class="link-arrow" href="/portafolio/relaq">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 21" data-tech-card data-title="sigicam" data-area="Salud y Bienestar" data-status="En evaluación" data-faculty="Facultad de Ingeniería (UNAB); desarrollo original de la Universidad de Valparaíso (UV)." data-trl="6">
+    <div class="tech-card__top"><span class="badge badge--info">En evaluación</span><span class="trl">TRL 6</span></div>
+    <h3>SIGICAM</h3>
+    <p class="muted">Facultad de Ingeniería (UNAB); desarrollo original de la Universidad de Valparaíso (UV).</p>
+    <p>Plataforma que digitaliza y centraliza la asignación, traslado y seguimiento de camas clínicas, reduciendo demoras y errores administrativos.</p>
+    <div class="tag-row"><span>Salud y Bienestar</span><span>Gestión hospitalaria</span><span>Salud digital</span></div>
+    <a class="link-arrow" href="/portafolio/sigicam">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><article class="card card--tech 22" data-tech-card data-title="terneza de carne" data-area="AgTech, FoodTech y Bioeconomía" data-status="Licenciable" data-faculty="Facultad de Ciencias de la Vida (UNAB)." data-trl="5">
+    <div class="tech-card__top"><span class="badge badge--success">Licenciable</span><span class="trl">TRL 5</span></div>
+    <h3>Terneza de Carne</h3>
+    <p class="muted">Facultad de Ciencias de la Vida (UNAB).</p>
+    <p>Sistema que usa nanoburbujas y ultrasonido para madurar carne en minutos en vez de días, mejorando su terneza entre 20% y 30% y reduciendo su carga bacteriana.</p>
+    <div class="tag-row"><span>AgTech, FoodTech y Bioeconomía</span><span>Industria cárnica</span><span>Agroexportación</span></div>
+    <a class="link-arrow" href="/portafolio/terneza-de-carne">Ver ficha <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+  </article><!--/PORTFOLIO:GRID--></div>
   <div class="empty-state" data-empty-state hidden><h2>No encontramos resultados</h2><p>Prueba con otra palabra clave o limpia los filtros para volver al listado completo.</p></div>
 </div></section><section class="section section--cta"><div class="container"><div class="cta-card"><div><div class="section-header section-header--invert">
     

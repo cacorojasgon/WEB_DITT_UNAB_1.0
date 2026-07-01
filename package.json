@@ -4,7 +4,8 @@
   "private": true,
   "description": "Sitio público DITT UNAB listo para Vercel con rutas estáticas y funciones API.",
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "npm run portfolio && node scripts/build.mjs",
+    "portfolio": "node scripts/build-portfolio.mjs",
     "validate": "node scripts/validate-links.mjs",
     "check": "node scripts/validate-links.mjs",
     "dev": "node scripts/serve.mjs",

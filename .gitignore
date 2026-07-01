@@ -5,3 +5,7 @@ public/
 node_modules/
 npm-debug.log*
 .vercel
+
+# Fichas fuente del portafolio (contienen datos de contacto y notas internas
+# "no publicar"): quedan solo en local, nunca en el repo público.
+content/fichas/
