@@ -226,7 +226,7 @@ function renderCard(f, extraClass) {
   </article>`;
 }
 
-const HEAD_FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/main.css">';
+const HEAD_FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/css/main.css?v=2">';
 
 function renderHead({ title, description, canonical }) {
   return `<meta charset="utf-8">
@@ -257,7 +257,7 @@ function renderHeader() {
       <span></span><span></span><span></span>
     </button>
     <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
-      <a href="/">Inicio</a><a href="/servicios">Servicios</a><a href="/portafolio" aria-current="page" class="is-active">Portafolio</a><a href="/recursos">Recursos</a><a href="/contacto">Contacto</a>
+      <a href="/">Inicio</a><a href="/servicios">Servicios</a><a href="/portafolio" aria-current="page" class="is-active">Portafolio</a><a href="/recursos">Recursos</a><a href="/nosotros">Nosotros</a><a href="/contacto">Contacto</a>
       <a class="btn btn--primary btn--sm" href="/declarar">Declarar invención</a>
     </nav>
   </div>
@@ -272,7 +272,7 @@ function renderFooter() {
       <p>Dirección de Innovación y Transferencia Tecnológica · Vicerrectoría de Investigación y Doctorado · Universidad Andrés Bello.</p>
       <div class="footer__contact"><a href="mailto:OTL@UNAB.CL">OTL@UNAB.CL</a><span>·</span><a href="tel:+56226618000">+56 2 2661 8000</a></div>
     </div>
-    <div><h2>DITT</h2><ul><li><a href="/">Inicio</a></li><li><a href="/portafolio">Portafolio</a></li><li><a href="/servicios">Servicios</a></li><li><a href="/contacto">Contacto</a></li></ul></div><div><h2>Recursos</h2><ul><li><a href="/recursos/declarar-invencion">Antes de declarar tu invención</a></li><li><a href="/recursos/preguntas-frecuentes">Preguntas frecuentes</a></li><li><a href="/recursos/casos-exito">Casos de éxito</a></li><li><a href="/recursos/propiedad-intelectual">Propiedad intelectual</a></li><li><a href="/recursos/modelos-contrato">Modelos de contrato</a></li></ul></div><div><h2>UNAB</h2><ul><li><a href="/institucional/vicerrectoria-investigacion">Vicerrectoría de Investigación</a></li><li><a href="/institucional/facultades">Facultades</a></li><li><a href="/institucional/campus-sedes">Campus y sedes</a></li></ul></div><div><h2>Legal</h2><ul><li><a href="/privacidad">Privacidad</a></li><li><a href="/accesibilidad">Accesibilidad</a></li><li><a href="/sitemap.xml">Mapa del sitio</a></li></ul></div>
+    <div><h2>DITT</h2><ul><li><a href="/">Inicio</a></li><li><a href="/portafolio">Portafolio</a></li><li><a href="/servicios">Servicios</a></li><li><a href="/nosotros">Nosotros</a></li><li><a href="/contacto">Contacto</a></li></ul></div><div><h2>Recursos</h2><ul><li><a href="/recursos/declarar-invencion">Antes de declarar tu invención</a></li><li><a href="/recursos/preguntas-frecuentes">Preguntas frecuentes</a></li><li><a href="/recursos/casos-exito">Casos de éxito</a></li><li><a href="/recursos/propiedad-intelectual">Propiedad intelectual</a></li><li><a href="/recursos/modelos-contrato">Modelos de contrato</a></li></ul></div><div><h2>UNAB</h2><ul><li><a href="/institucional/vicerrectoria-investigacion">Vicerrectoría de Investigación</a></li><li><a href="/institucional/facultades">Facultades</a></li><li><a href="/institucional/campus-sedes">Campus y sedes</a></li></ul></div><div><h2>Legal</h2><ul><li><a href="/privacidad">Privacidad</a></li><li><a href="/accesibilidad">Accesibilidad</a></li><li><a href="/sitemap.xml">Mapa del sitio</a></li></ul></div>
   </div>
   <div class="footer__bottom"><div class="container"><span>© 2026 Universidad Andrés Bello®. Conectar · Innovar · Liderar.</span><span>Santiago, Chile</span></div></div>
 </footer>
@@ -294,7 +294,7 @@ function renderDetailPage(f, related) {
   const relatedHtml = related.length ? `<section class="section section--white"><div class="container"><div class="section-header">
     <p class="eyebrow">Relacionadas</p>
     <h2>Otras tecnologías del área</h2>
-  </div><div class="card-grid card-grid--3">${related.map(renderCard).join('')}</div></div></section>` : '';
+  </div><div class="card-grid card-grid--3">${related.map(r => renderCard(r)).join('')}</div></div></section>` : '';
   return `<!doctype html>
 <!-- ${GENERATED_MARK} — no editar a mano, se regenera con \`npm run portfolio\` -->
 <html lang="es">
@@ -401,7 +401,7 @@ function main() {
   indexHtml = replaceBetween(indexHtml, '<!--PORTFOLIO:STATUS_OPTIONS-->', '<!--/PORTFOLIO:STATUS_OPTIONS-->', renderStatusOptions());
   const countText = fichas.length === 1 ? '1 tecnología disponible' : `${fichas.length} tecnologías disponibles`;
   indexHtml = replaceBetween(indexHtml, '<!--PORTFOLIO:COUNT-->', '<!--/PORTFOLIO:COUNT-->', countText);
-  indexHtml = replaceBetween(indexHtml, '<!--PORTFOLIO:GRID-->', '<!--/PORTFOLIO:GRID-->', fichas.map(renderCard).join(''));
+  indexHtml = replaceBetween(indexHtml, '<!--PORTFOLIO:GRID-->', '<!--/PORTFOLIO:GRID-->', fichas.map(f => renderCard(f)).join(''));
   fs.writeFileSync(indexPath, indexHtml);
 
   const currentSlugs = new Set(fichas.map(f => f.slug));

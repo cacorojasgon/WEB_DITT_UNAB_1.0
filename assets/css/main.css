@@ -966,6 +966,49 @@ input:focus, select:focus, textarea:focus
   align-items:start
 }
 
+.team-card
+{
+  text-align:center;
+  align-items:center
+}
+
+.team-card .avatar
+{
+  width:76px;
+  height:76px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto .9rem;
+  background:var(--unab-navy);
+  color:#fff;
+  font-weight:800;
+  font-size:1.3rem;
+  letter-spacing:.04em
+}
+
+.team-card h3
+{
+  margin-bottom:.2rem
+}
+
+.team-card .role
+{
+  color:var(--unab-red);
+  font-weight:700;
+  font-size:.85rem;
+  margin-bottom:.6rem
+}
+
+.team-card a
+{
+  color:var(--unab-navy-700);
+  font-weight:600;
+  font-size:.88rem;
+  word-break:break-all
+}
+
 .form-shell
 {
   max-width:860px

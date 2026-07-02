@@ -23,6 +23,7 @@ const staticEntries = [
   'declarar',
   'contacto',
   'recursos',
+  'nosotros',
   'institucional',
   'privacidad',
   'accesibilidad',
